@@ -2,7 +2,7 @@
 description: Before you can use the API you need to register and receive your API keys
 ---
 
-# API Keys
+# Request API Keys
 
 ## Sign up to receive your API Key
 

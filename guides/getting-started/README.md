@@ -8,7 +8,7 @@ To quickly understand the basics of how a video edit is constructed using JSON, 
 
 {% page-ref page="core-concepts.md" %}
 
-To create your first video in 5 minutes, start here:
+You will need an API key before you can do anything:
 
-{% page-ref page="quick-start-guide.md" %}
+{% page-ref page="request-api-keys.md" %}
 
