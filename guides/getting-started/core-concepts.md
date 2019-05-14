@@ -42,7 +42,7 @@ The timeline represents the time that the video will play for, using seconds and
 
 ### Tracks
 
-Tracks are like layers within the timeline which spans the entire length of the timeline, a track contains one or more **clips**. Tracks can be visualised as layers that can be placed one on top of another. Clips on the top most track will obscure those on tracks below it. This can be useful for when you want to layer a title over a video clip or you want to fade between clips.
+Tracks are like layers within the timeline which span the entire length of the timeline, a track contains one or more **clips**. Tracks can be visualised as layers that can be placed one on top of another. Clips on the top most track will obscure those on tracks below it. This can be useful for when you want to layer a title over a video clip or you want to fade between clips.
 
 Tracks also help to logically organise different types of content, for example a title track which plays over the top of a video and a watermark track that plays over the top of everything.
 
@@ -106,4 +106,28 @@ Clips can also have an **in** and **out** point, for example; imagine you have a
 {% hint style="danger" %}
 Do not place clips on a track so that their start or end times overlap, this will result in the clips flashing between each other as the API does not know which clip to display first.
 {% endhint %}
+
+A clip can be be one of several asset types, these asset types are **title**, **image** and **video**. For each clip you need to specify the **type** and the **src**. For images and videos the src is the publicly accessible URL of the asset, for titles this is the text string for the title.
+
+A clip can also have transitions, effects and filters applied to them. A clip may look something like this when all options are applied:
+
+```javascript
+{
+  "type": "video",
+  "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/video.mp4",
+  "start": 0,
+  "in": 0,
+  "out": 4,
+  "transition": {
+    "in": "fade",
+    "out": "fade"
+  },
+  "options": {
+    "filter": "boost",
+    "effect": "slideRight"
+  }
+}
+```
+
+From these basic building blocks you should be able to assemble a sophisticated, reusable template to create videos. Assest can be replaced or clips added using loops, conditions and other coding constructs allowing you to build a range of video based applications.
 

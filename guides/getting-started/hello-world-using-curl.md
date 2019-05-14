@@ -4,7 +4,7 @@ description: Create your first video in 5 minutes using the command line and Cur
 
 # Hello World \(Curl\)
 
-This Hello World guide should help to provide a basic understanding of how quick and easy it is to create a simpe video using styled text, a soundtrack and a simple fade transition.
+This Hello World guide should provide you with a basic understanding of how quick and easy it is to create a simple video using styled text, a soundtrack and a simple fade transition.
 
 Before you begin ensure you have registered and received your API Keys:
 
@@ -23,10 +23,10 @@ curl --version
 You should see an output like:
 
 ```text
-curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL
-Release-Date: [unreleased]
-Protocols: dict file ftp ftps http https imap imaps pop3 pop3s smtp smtps telnet tftp
-Features: AsynchDNS IPv6 Largefile SSPI Kerberos SPNEGO NTLM SSL
+curl 7.64.0 (x86_64-pc-linux-gnu) libcurl/7.64.0 OpenSSL/1.1.1b zlib/1.2.11 libidn2/2.0.5 libpsl/0.20.2 (+libidn2/2.0.5) libssh/0.8.6/openssl/zlib nghttp2/1.36.0 librtmp/2.3
+Release-Date: 2019-02-06
+Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp 
+Features: AsynchDNS IDN IPv6 Largefile GSS-API Kerberos SPNEGO NTLM NTLM_WB SSL libz TLS-SRP HTTP2 UnixSockets HTTPS-proxy PSL
 ```
 
 ### Create the Hello World Edit
@@ -37,7 +37,7 @@ We'll use a text file to define the JSON data so that it is easy to edit and for
 {
    "timeline":{
       "soundtrack":{
-         "src":"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/private/dubstep.mp3",
+         "src":"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/music/floating.mp3",
          "effect":"fadeOut"
       },
       "background":"#000000",
@@ -106,7 +106,7 @@ Take a note of the **id**, it will be different from the example above, you will
 
 Your video is now either waiting in a queue to be rendered or is being processed. To check the status and know when rendering is complete and the video file is ready we need to poll the API.
 
-Using the id noted in the previous step and your own key, call the staging API using the following command:
+Using the **id** noted in the previous step and your own key, call the staging API using the following command:
 
 ```bash
 curl -X GET \

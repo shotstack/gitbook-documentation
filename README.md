@@ -1,7 +1,7 @@
 ---
 description: >-
-  Shotstack is a new kind of system for editing videos using code that enables
-  marketers, developers and designers to automate the creation if videos at
+  Shotstack is a tool for developers to automate the editing and creation of
+  videos enabling them to build new kinds of video applications that operate at
   scale.
 ---
 
