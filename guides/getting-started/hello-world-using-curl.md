@@ -37,7 +37,7 @@ We'll use a text file to define the JSON data so that it is easy to edit and for
 {
    "timeline":{
       "soundtrack":{
-         "src":"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/music/floating.mp3",
+         "src":"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/music/moment.mp3",
          "effect":"fadeOut"
       },
       "background":"#000000",
@@ -45,21 +45,20 @@ We'll use a text file to define the JSON data so that it is easy to edit and for
          {
             "clips":[
                {
-                  "type":"title",
-                  "src":"Hello World",
+                  "asset": {
+                     "type":"title",
+                     "text":"Hello World",
+                     "style":"minimal"
+                  },
                   "start":0,
-                  "in":0,
-                  "out":5,
+                  "length":5,
                   "transition":{
                      "in":"fade",
                      "out":"fade"
-                  },
-                  "options":{
-                     "style":"minimal"
                   }
                }
             ]
-         },
+         }
       ]
    },
    "output":{

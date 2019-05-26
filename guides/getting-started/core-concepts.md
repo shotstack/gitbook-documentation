@@ -66,11 +66,11 @@ Tracks are an array within the timeline, the first element is the top track and 
 
 ### Clips
 
-Clips are where you select the asset \(video, image or title\) you want to display within a track on the timeline. You need to specify the **type** of asset and also the **source** of the asset you want to use for the clip, this can either be a URL to a video or image file or for titles a string. **Transitions**, **effects** and **filters** can also be applied to clips.
+Clips are where you select the asset \(video, image or title\) you want to display within a track on the timeline, when it starts, how long it plays for and what effects, transitions and filters you want to apply.
 
-Clips are placed on a track at a specific **start** time, for example a clip with a **start** time of 3 will appear in the video after three seconds have played.
+Clips are placed on a track at a specific **start** time, for example a clip with a **start** time of 3 will appear in the video after three seconds have played. Clips also have a **length** which determines how long the clip will play for in seconds.
 
-Clips can also have an **in** and **out** point, for example; imagine you have a video clip that is 10 seconds long in total but you want to trim the first two seconds and only play five more seconds of the clip, you would set the in point to 2 and the out point to 7.
+Each **asset** type has a specific set of options and features but you must specify the **type** of asset and also the **content** of the asset such a URL **src** to a video or image file or for titles a **text** string.
 
 ```javascript
 {
@@ -80,20 +80,23 @@ Clips can also have an **in** and **out** point, for example; imagine you have a
                 clips: [
                    {
                        // place an image at the very start of the track/timeline that plays for 4 seconds.
-                        "type": "image",
-                        "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/photo.jpg",
-                        "start": 0,
-                        "in": 0,
-                        "out": 4
+                       "asset":{
+                           "type": "image",
+                           "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/photo.jpg",
+                       },
+                       "start": 0,
+                       "length": 4
                     },
                     {
                         // place a video that starts on the fourth second of the track/timeline that has 
                         // the first two seconds (in: 2) trimmed and plays for 4 seconds (out: 6).
-                        "type": "video",
-                        "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/video.mp4",
-                        "start": 4,
-                        "in": 2,
-                        "out": 6
+                       "asset":{
+                           "type": "video",
+                           "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/footage.mp4",
+                           "trim": 2
+                       },
+                       "start": 4,
+                       "length": 6
                     }
                 ]
             },
@@ -107,27 +110,26 @@ Clips can also have an **in** and **out** point, for example; imagine you have a
 Do not place clips on a track so that their start or end times overlap, this will result in the clips flashing between each other as the API does not know which clip to display first.
 {% endhint %}
 
-A clip can be be one of several asset types, these asset types are **title**, **image** and **video**. For each clip you need to specify the **type** and the **src**. For images and videos the src is the publicly accessible URL of the asset, for titles this is the text string for the title.
-
 A clip can also have transitions, effects and filters applied to them. A clip may look something like this when all options are applied:
 
 ```javascript
 {
-  "type": "video",
-  "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/video.mp4",
+  "asset":{
+    "type": "video",
+    "src": "https://s3-ap-southeast-2.amazonaws.com/my-bucket/footage.mp4",
+    "trim": 2,
+    "volume": 0.5
+  },
   "start": 0,
-  "in": 0,
-  "out": 4,
+  "length": 4,
   "transition": {
     "in": "fade",
     "out": "fade"
   },
-  "options": {
-    "filter": "boost",
-    "effect": "slideRight"
-  }
+  "filter": "boost",
+  "effect": "slideRight"
 }
 ```
 
-From these basic building blocks you should be able to assemble a sophisticated, reusable template to create videos. Assest can be replaced or clips added using loops, conditions and other coding constructs allowing you to build a range of video based applications.
+From these basic building blocks you should be able to assemble a sophisticated, reusable template to create videos. Assets can be replaced or clips added using loops, conditions and other coding constructs allowing you to build a range of video based applications.
 
