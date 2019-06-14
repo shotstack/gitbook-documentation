@@ -126,9 +126,10 @@ In less than one minute you should receive a 200 response code and payload simil
    "message":"OK",
    "response":{
       "id":"d2b46ed6-998a-4d6b-9d91-b8cf0193a655",
-      "owner":"zysxdnk0f1",
+      "owner":"hckwccw3q3",
       "plan":"sandbox",
       "status":"done",
+      "url":"https://s3-ap-southeast-2.amazonaws.com/shotstack-api-stage-output/hckwccw3q3/d2b46ed6-998a-4d6b-9d91-b8cf0193a655.mp4",
       "data":{
          "output":{
             ...
@@ -143,10 +144,6 @@ In less than one minute you should receive a 200 response code and payload simil
 }
 ```
 
-{% hint style="info" %}
-Take note of the **owner** value in the response and also the **id** which will be used when constructing the video download URL.
-{% endhint %}
-
 {% hint style="danger" %}
 If the status is **failed** then there has been an error and the render will not continue. You can try again or contact us for support.
 {% endhint %}
@@ -159,15 +156,11 @@ When the status returned from polling is **done** then the video is ready for do
 | :--- | :--- |
 | https://s3-ap-southeast-2.amazonaws.com/shotstack-api-stage-output/ | https://s3-ap-southeast-2.amazonaws.com/shotstack-api-v1-output/ |
 
-To construct a complete download URL you need to combine the storage URL above with your **owner** id \(returned in the polling response\) and the UUID **id** of the original render response plus the file extension \(.mp4\).
-
-The final download URL in our example will look like:
+Download the video using the URL returned in the get render status response:
 
 ```text
-https://s3-ap-southeast-2.amazonaws.com/shotstack-api-stage-output/hwxmtow4o5/d2b46ed6-998a-4d6b-9d91-b8cf0193a655.mp4
+curl -O https://s3-ap-southeast-2.amazonaws.com/shotstack-api-stage-output/hwxmtow4o5/d2b46ed6-998a-4d6b-9d91-b8cf0193a655.mp4
 ```
-
-You can go ahead and open this URL in a modern browser and it will play the video file or you can download it and use it in any way you choose.
 
 {% hint style="warning" %}
 Videos are only stored temporarily for 24 hours, rate limits will apply if too many requests to stream or download the file are attempted.
