@@ -1,4 +1,8 @@
+---
+description: Comprehensive API reference with JSON and code examples.
+---
+
 # API Reference
 
-API reference documentation is currently located here: [https://shotstack.restlet.io/](https://shotstack.restlet.io/)
+View our comprehensive [API reference documentation](https://shotstack.io/docs/api/index.html).
 
