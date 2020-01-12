@@ -6,7 +6,7 @@ description: Before you can use the API you need to register and receive your AP
 
 ## Sign up to receive your API Key
 
-[Sign up](https://docs.google.com/forms/d/e/1FAIpQLSeUSMOlpd_cy5TktKpki3aYEbfbpMcJpYMq0xnDjUWfSPoyNw/viewform) to the Shotstack service to receive an API key, we'll email you keys for both a staging sandbox and a live production environment.
+[Sign up](https://dashboard.shotstack.io/register) to the Shotstack service to receive an API key, we'll email you keys for both a staging sandbox and a live production environment.
 
 Keys are a random 40 character string that look something like:
 
