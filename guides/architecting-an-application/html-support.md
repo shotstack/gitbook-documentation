@@ -154,6 +154,12 @@ The following attributes are supported by the `td` and `th` tags:
       style="text-align:left">Font shorthand property</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>text-align</code>
+      </td>
+      <td style="text-align:left">[ left | right | center ]</td>
+      <td style="text-align:left">Text alignment</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>text-indent</code>
       </td>
       <td style="text-align:left">&lt;length&gt;px</td>
