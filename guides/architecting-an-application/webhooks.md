@@ -1,7 +1,7 @@
 ---
 description: >-
   Receive callback POST notifications whenever the status of a render completes
-  or fails.
+  or fails
 ---
 
 # Webhooks

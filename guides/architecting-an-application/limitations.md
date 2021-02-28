@@ -24,10 +24,13 @@ The sandbox API has the following usage limits:
 * 10 requests per second
 * 2,000 requests per month \(including polling and renders\)
 
+To reduce the number of polling requests consider using [webhooks](webhooks.md).
+
 ### Environment Limits
 
 The render environment has the following limits:
 
-* Max 15 minutes render time – it's designed for short 30 sec to 5 min clips.
-* The amount of footage you can ingest and create for each render is 512MB – i.e. the original footage you send to be trimmed and edited plus the size of the final output video must be less than 512MB.
+* Max 15 minutes render time.
+* The amount of footage you can ingest and create for each render is 512MB when using the [local disk type](disk-types.md#speed-optimised-local-disk-type) – i.e. the original footage you send to be trimmed and edited plus the size of the final output video must be less than 512MB.
+* When using the [mount disk type](disk-types.md#file-size-optimised-mount-disk-type) you can ingest up to 5GB of source footage and assets and output a rendered video with a file size of 512MB.
 
