@@ -5,4 +5,5 @@ root: ./
   summary: SUMMARY.md​
 
 redirects:
+  test: /getting-started/hello-world-using-curl.md
   getting-started/hello-world-postman: /getting-started/hello-world-using-curl.md
