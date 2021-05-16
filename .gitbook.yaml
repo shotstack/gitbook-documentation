@@ -5,4 +5,4 @@ root: ./
   summary: SUMMARY.md​
 
 redirects:
-  guides/getting-started/hello-world-postman: /getting-started/hello-world-using-curl.md
+  guides/getting-started/hello-world-postman: ./guides/getting-started/hello-world-using-curl.md
