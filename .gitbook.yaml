@@ -5,4 +5,4 @@ root: ./
   summary: SUMMARY.md​
 
 redirects:
-  getting-started/hello-world-postman: https://shotstack.io/docs/guide/getting-started/hello-world-postman
+  getting-started/hello-world-postman: /getting-started/hello-world-using-curl.md
