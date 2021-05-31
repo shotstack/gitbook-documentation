@@ -3,7 +3,7 @@ structure:
   summary: SUMMARY.md
 
 redirects:
-  guides/getting-started/: ./README.md
+  guides/getting-started: ./README.md
   guides/getting-started/core-concepts: ./README.md
   guides/getting-started/request-api-keys: ./README.md
   guides/getting-started/hello-world-using-curl: ./README.md
