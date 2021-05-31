@@ -3,4 +3,16 @@ structure:
   summary: SUMMARY.md
 
 redirects:
+  guides/getting-started/: ./README.md
+  guides/getting-started/core-concepts: ./README.md
+  guides/getting-started/request-api-keys: ./README.md
+  guides/getting-started/hello-world-using-curl: ./README.md
   guides/getting-started/hello-world-postman: ./README.md
+  guides/architecting-an-application: ./README.md
+  guides/architecting-an-application/webhooks: ./README.md
+  guides/architecting-an-application/html-support: ./README.md
+  guides/architecting-an-application/disk-types: ./README.md
+  guides/architecting-an-application/caching: ./README.md
+  guides/architecting-an-application/limitations: ./README.md
+  guides/api-reference: ./README.md
+  guides/sdks: ./README.md
