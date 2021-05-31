@@ -14,5 +14,3 @@ You will need an API key before you can call the API:
 
 Create your first video edit in 5 minutes using Curl:
 
-{% page-ref page="hello-world-using-curl.md" %}
-
