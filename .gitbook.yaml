@@ -3,4 +3,4 @@ structure:
   summary: SUMMARY.md
 
 redirects:
-  guides/getting-started/hello-world-postman: /
+  guides/getting-started/hello-world-postman: ./guides/getting-started/core-concepts.md
