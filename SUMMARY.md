@@ -2,5 +2,3 @@
 
 * [Shotstack Docs \(Archived\)](README.md)
 
-## Guides
-
