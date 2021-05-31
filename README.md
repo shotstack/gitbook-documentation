@@ -5,9 +5,7 @@ description: >-
   scale.
 ---
 
-# What is Shotstack?
+# Shotstack Docs \(Archived\)
 
-We are migrating our docs to: [**https://shotstack.io/docs/guide/**](https://shotstack.io/docs/guide/)\*\*\*\*
-
-{% page-ref page="guides/getting-started/" %}
+#### We have migrated our docs to: [**https://shotstack.io/docs/guide/**](https://shotstack.io/docs/guide/)\*\*\*\*
 
